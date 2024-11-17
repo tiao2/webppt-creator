@@ -1,0 +1,47 @@
+var allset={
+    'page-number': 0,
+    'name': 'Untitle.pptjs'
+   }
+warn('page-number',2);
+warn('name','test.pptjs');
+var pgs=Array(allset['page-number']);
+var bg={
+     'color': (c)=>{document.body.style.backgroundColor=c;},
+     'image': (i)=>{document.body.style.backgroundImage=i;}
+  };
+var el={
+    'add': (t)=>{var a=document.createElement(t);a.id=Math.random();document.body.appendChild(a);return({'sets': (e,s)=>{for(let k in e){document.getElementById(a.id).style[k]=e[k];};for(let y in s){document.getElementById(a.id)[y]=s[y];}}}); }
+ };
+setPage(1,function(){
+   bg.color('black');
+   el.add("div").sets({
+      'height': '40%',
+      'width': '40%',
+     'position': 'absolute',
+     'top': '30%',
+     'left': '30%',
+     'backgroundColor': 'springgreen'
+   },{
+    'innerHTML': '你好!这是可以当做Javascript运行的演示文稿,目前的用法如下:<br/>1.该文件格式为.pptjs,您也可以改成.js<br/>2.为这个文件命名:使用<code>warn("name","替换为你的名称")</code><br/>3.如想要使用动态功能,可以使用<code>el.add("script")</code>用Javascript实现<br/>4.使用<code>bg</code>设置背景<br/>5.点击屏幕任意一处切换下一页<br/>更多内容详见格式介绍'
+   });
+});
+setPage(2,function(){
+   el.add("div").sets({
+      'height': '40%',
+      'width': '40%',
+     'position': 'absolute',
+     'top': '30%',
+     'left': '30%',
+     'backgroundColor': 'springgreen',
+     'z-index': '1'
+   },{
+    'innerHTML': ('该格式仍存在bug,敬请谅解!<br/>地址:'+location.href)
+   });
+});
+function warn(n,v){ allset[n]=v; }
+function getwarn(n){ return allset[n]; }
+function setPage(p,f){pgs[p-1]=f; }
+var s=0;
+(pgs[0])();
+document.addEventListener('mousedown',function(e){try{s++;(pgs[s])();}catch(e){document.write('<h1><center>放映结束</center></h1>');}});
+document.getElementsByTagName('title')[0].innerText='pptjs文件读取 - '+getwarn('name');
