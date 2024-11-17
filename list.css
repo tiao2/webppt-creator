@@ -15,7 +15,7 @@
  #read { 
    position: absolute;
    height: 40%; 
-   width: 15%; 
+   width: 20%; 
    background-color: #f6f6f6; 
    top: 25%;
    left: 50%;
@@ -26,10 +26,10 @@
 #sub {
    position: absolute;
    height: 40%; 
-   width: 15%; 
+   width: 20%; 
    background-color: #f6f6f6; 
    top: 25%;
-   left: 60%;
+   left: 70%;
    font-size: 20px;
    color: black;
    border-radius: 5px;
