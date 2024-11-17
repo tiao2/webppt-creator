@@ -35,7 +35,7 @@ setPage(2,function(){
      'backgroundColor': 'springgreen',
      'z-index': '1'
    },{
-    'innerHTML': ('该格式仍存在bug,敬请谅解!<br/>地址:'+location.href)
+    'innerHTML': '该格式仍存在bug,敬请谅解!<br/><a href="test.pptjs">下载</a><br/>The end,Thank you for watching.'
    });
 });
 function warn(n,v){ allset[n]=v; }
