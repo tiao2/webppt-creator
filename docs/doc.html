@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>PPTJS使用文档</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" />
+</head>
+<body>
+    <a href='../index.html'>返回主页</a><br/>
+    <code>.pptjs</code>中有文件开头和结尾,最好不要编辑.
+    <h3>中间部分如何编辑:</h3>
+     示例:<br/>
+<pre><code class="language-javascript">setPage(1,function(){
+   el.add("div").sets({
+     'height': '40%',
+     'width': '40%',
+     'position': 'absolute',
+     'top': '30%',
+     'left': '30%',
+     'backgroundColor': 'springgreen',
+     'z-index': '1'
+   },{
+    'innerHTML': ('该格式仍存在bug,敬请谅解!地址:'+location.href)
+   });
+});</code></pre>
+    <strong>1.</strong><code><span style="color:blue">setPage</span></code>用来设置页面:<br/>
+     <code>setPage(<i>page-number</i>,<i>page-set</i>)</code><br/>
+   <strong>2.</strong><code><span style="color:blue">bg,el</span></code>分别用来设置背景和元素:<br/>
+     <code>bg.color(<i>color</i>)</code> 设置背景颜色<br/>
+     <code>bg.image(<i>image</i>)</code> 设置背景图片<br/>
+     <code>el.add(<i>tagName</i>).sets(<i>style-set</i>,<i>other-set</i>)</code> 添加元素<br/>
+   <h3>其余用法同Javascript</h3>
+</body>
+</html>
