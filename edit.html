@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      #input {
+              height: 50%;
+              width: 98%;
+               border: 1px solid #ccc;
+               overflow: auto;
+               background-color: white;
+               position: absolute;
+               top: 30%;
+               left: 2%;
+               }
+            #line {
+                height: 50%;
+                 width: 2%;
+                 size: 60px;
+                 background-color: #f6f6f6;
+                 position: absolute;
+                 top: 30%;
+                 left: 1px;
+                 border: 1px solid #ccc;
+                 overflow-x: hidden;
+                 text-align: right;
+                    }
+             #hd {
+               height: 30%;
+               width: 98%;
+               border: 1px solid #ccc;
+               overflow: auto;
+               background-color: white;
+               color: skyblue;
+               position: absolute;
+               top: 0%;
+               left: 2%;
+           }
+        #lineh {
+                height: 30%;
+                 width: 2%;
+                 size: 60px;
+                 background-color: #f6f6f6;
+                 position: absolute;
+                 top: 0%;
+                 left: 1px;
+                 border: 1px solid #ccc;
+                 overflow-x: hidden;
+                 text-align: right;
+                    }
+          #bd {
+               height: 20%;
+               width: 98%;
+               border: 1px solid #ccc;
+               overflow: auto;
+               background-color: white;
+               color: skyblue;
+               position: absolute;
+               top: 80%;
+               left: 2%;
+           }
+    #lineb {
+                height: 20%;
+                 width: 2%;
+                 size: 60px;
+                 background-color: #f6f6f6;
+                 position: absolute;
+                 top: 80%;
+                 left: 1px;
+                 border: 1px solid #ccc;
+                 overflow-x: hidden;
+                 text-align: right;
+                    }
+   </style>
+</head>
+<body>
+   <pre id="lineh">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre>
+   <pre id='hd' contenteditable='true'>var allset={
+    'page-number': 0,
+    'name': 'Untitle.pptjs'
+   }
+warn('page-number',2);
+warn('name','main.pptjs');
+var pgs=Array(allset['page-number']);
+var bg={
+     'color': (c)=>{document.body.style.backgroundColor=c;},
+     'image': (i)=>{document.body.style.backgroundImage=i;}
+  };
+var el={
+    'add': (t)=>{var a=document.createElement(t);a.id=Math.random();document.body.appendChild(a);return({'sets': (e,s)=>{for(let k in e){document.getElementById(a.id).style[k]=e[k];};for(let y in s){document.getElementById(a.id)[y]=s[y];}}}); }
+ };</pre>
+   <pre id="line">1</pre>
+    <pre id='input' contenteditable='true'></pre>
+   <pre id="lineb">1
+2
+3
+4
+5
+6
+7</pre>
+<pre id='bd'>function warn(n,v){ allset[n]=v; }
+function getwarn(n){ return allset[n]; }
+function setPage(p,f){pgs[p-1]=f; }
+var s=0;
+(pgs[0])();
+document.addEventListener('mousedown',function(e){try{s++;(pgs[s])();}catch(e){document.write('&lt;h1&gt;&lt;center&gt;The screening is over.&lt;/center&gt;&lt;/h1&gt;');}});
+document.getElementsByTagName('title')[0].innerText='pptjs file reading - '+getwarn('name');</pre>
+  <script src='xrk.js'></script>
+  <script>
+  document.getElementById("input").addEventListener('keyup', function(event){
+           var a=document.getElementById('input').innerText.split('\n').length;
+           document.getElementById("line").innerText=((Array.from({length: a-1},(_,index)=> index+1)).map(text => text+'\n')).join('');
+   });
+   var module1 = document.getElementById('input'),module2 = document.getElementById('line');
+              module1.addEventListener('scroll', function() {
+                module2.scrollTop = module1.scrollTop;
+                 });
+             module2.addEventListener('scroll', function() {
+                module1.scrollTop = module2.scrollTop;
+                 });
+ </script>
+</body>
+</html>
