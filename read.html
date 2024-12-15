@@ -6,6 +6,32 @@
     <title>pptjs文件读取</title>
 </head>
 <body>
-    <script src='test.pptjs'></script>
+    <script src='base64.js'></script>
+    <script>
+      function gqu() {
+    let queryParams = {};
+    let ur = window.location.href;
+    let queryString = ur.split('?')[1];
+    if (queryString) {
+        let params = queryString.split('&');
+        params.forEach(function(param) {
+            let split = param.split('=');
+            queryParams[split[0]] = split[1];
+        });
+    }
+    return queryParams;
+};
+
+function loaded() {
+   var a=document.createElement("script");
+   a.src=gqu().f;
+   document.body.appendChild(a);
+};
+function loadf(){
+   eval(dc(gqu().fns));
+  }
+ if(gqu().f!=undefined) loaded();
+ if(gqu().fns!=undefined) loadf();
+    </script>
 </body>
 </html>
