@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>pptjs文件编辑</title>
+    <title></title>
     <style>
       #input {
               height: 50%;
@@ -73,9 +73,20 @@
                  overflow-x: hidden;
                  text-align: right;
                     }
+          #mode {
+            position: absolute;
+            z-index:1;
+            top:0%;
+            right:-1%;
+            width: 20%;
+            height: 3%;
+            background-color: #eee;
+            }
+        button {border: none; color: black;}
    </style>
 </head>
 <body>
+   <div id='mode'><button onclick="location.href='concentrate.html'">专注模式</button><button>可视化编程模式</button></div>
    <pre id="lineh">1
 2
 3
