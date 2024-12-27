@@ -1,0 +1,65 @@
+.m {
+   height: 80%;
+   width: 70%;
+   border: none;
+   border-radius: 0%;
+   font-size: 80%;
+   background-color:  #999;
+   color: white;
+ }
+#h {
+   position:absolute;
+   top:0%;
+   left:0%;
+   width:100%;
+   height: 5%;
+   background-color: #999;
+  }
+#list {
+   position:absolute;
+   top:5%;
+   left:0%;
+   width:20%;
+   height: 90%;
+   overflow-y: auto;
+   overflow-x: hidden;
+   background-color: #ddd;
+  }
+#edit {
+   position:absolute;
+   top:5%;
+   left:20%;
+   width:80%;
+   height: 95%;
+   overflow-y: auto;
+   overflow-x: hidden;
+   background-color: #f6f6f6;
+  }
+iframe {
+    position: relative;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+  }
+strong {
+    position: relative;
+    top: -30%;
+    left: 0%;
+   }
+.page {
+   width: 100%;
+   height: 20%;
+   border-bottom: 1px solid black;
+}
+#add {
+   position:absolute;
+   top:95%;
+   left:0%;
+   width:20%;
+   height: 5%;
+   background-color: #ccc;
+   border-color: #ccc;
+   font-size: 25px;
+   color: black
+  }
