@@ -10,8 +10,19 @@
 <div id="h">
     <input class="m" placeholder='名称…'/><button class='m' style="width:28%;color:black;">确定</button>
 </div>
-<div id='list'><div class='page'><strong>1</strong><iframe src='yl.html' id='1' frameborder='none'></iframe></div></div>
-<button id='add' onclick="">+</button>
-<div id="edit"></div>
+<div id='list'><div class='page'  onclick="ps(1)"><strong>1</strong><iframe src='yl.html' id='1' frameborder='none'></iframe></div></div>
+<button id='add' onclick="adb()">+</button>
+<div id="edit">
+    <div id='bg'>
+       <header>背景</header>
+        背景颜色:<input placeholder='输入颜色…' class="bgs" id='c'/><br/>
+        背景图片:<input placeholder='输入图片链接/base64' class="bgs"/>
+        <div id='search' style='position:fixed;top:14%;z-index:10;left:27%;display:none;width:56%;background-color:#eee;height:30%;overflow-x:hideen;overflow-y:auto'></div>
+    </div>
+    <div id='el'>
+       <header>元素设置</header>
+    </div>
+</div>
+<script src='block.js'></script>
 </body>
 </html>
