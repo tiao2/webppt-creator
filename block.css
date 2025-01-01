@@ -76,8 +76,37 @@ header { background-color: white; }
     top: 15.1%;
     left: 0%;
     width: 100%;
-    height: 50%;
-    border-bottom: 1px solid black;
+    height: 45%;
    }
 .bgs { background-color: #f6f6f6; width: 70%; }
  .sj { border-bottom: 0.5px solid black; }
+#search {
+   position:fixed;
+   top:14%;
+   left:27%;
+   z-index:2;
+  display:none;
+  width:56%;
+  background-color:#eee;
+  height:30%;
+  overflow-x:hidden;
+  overflow-y:auto;
+  }
+#sc {
+    position: absolute;
+    top: 65.2%;
+    left: 0%;
+    width: 100%;
+    height: 34.8%;
+   }
+#ade {
+    position: absolute;
+    top: 60.1%;
+    left: 0%;
+    width: 100%;
+    height: 5%;
+    border-bottom: 1px solid black;
+    font-size: 25px;
+    background-color:  #f6f6f6;
+    color: black;
+   }
