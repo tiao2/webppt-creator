@@ -4,8 +4,11 @@ function adb(){
   bn++;
   }
 function ps(n){
-   var can=(document.getElementById("bg").innerHTML.search("完成")==-1);
-   if(can){document.getElementById("bg").innerHTML+="<br/><button onclick=''>完成</button>";}
+   document.getElementById("subb").onclick=()=>bc(n,'bg');
+   document.getElementById("sube").onclick=()=>bc(n,'el');
+   document.getElementById("toast").style.display="block";
+   document.getElementById("toast").innerHTML="您正在编辑: 第"+n+"页";
+   setTimeout(function(){document.getElementById("toast").style.display='none';} , 2000);
   }
 ce.addEventListener("keyup", function(e){
            var a=ce.value.split(/[^#0123456789abcdefABCDEF]/); if(ce.value.search("#")>=0) ce.value=a[0];
@@ -22,3 +25,12 @@ gt=gt.split(',');dt=dt.split(',');
         document.getElementById("search").innerHTML=sd;
              } else { document.getElementById("search").style.display='none'; }
         });
+function bc(p,n){
+
+   document.getElementById("toast").style.display="block";
+   document.getElementById("toast").innerHTML="成功保存了相关内容。";
+   setTimeout(function(){document.getElementById("toast").style.display='none';}, 2000);
+  }
+function ade(){
+  document.getElementById("el").innerHTML+='<div name="els">未制作程序</div>';
+ }
