@@ -1,4 +1,4 @@
-var bn=1,ce=document.getElementById("c");
+var bn=1,ce=document.getElementById("c"),hs=[];
 function adb(){
    document.getElementById("list").innerHTML+="<div class='page' onclick='ps("+(bn+1)+")'><strong>"+(bn+1)+"</strong><iframe src='yl.html' id='"+(bn+1)+"' frameborder='none'></iframe></div>"
   bn++;
@@ -18,11 +18,15 @@ var gt='aliceblue,antiquewhite,aqua,aquamarine,azure,bisque,black,blanchedalmond
 gt=gt.split(',');dt=dt.split(',');
   for(var n=0; n<dt.length; n++){
          var s=dt[n],yn=(s.search(ce.value)===-1);
-         if(yn){console.log(yn);gt.splice(gt.findIndex(item => item === s), 1);}
+         if(yn){gt.splice(gt.findIndex(item => item === s), 1);}
       }
-       var sd=gt.map(m => '<div height="10px" width="100%" onclick="ce.value=\''+m+'\';document.getElementById(\'search\').style.display=\'none\';" class="sj"><label style="background-color:'+m+'">&nbsp;&nbsp;&nbsp;</label>'+m+'</div>').join('');
+       var sd=gt.map(m => '<div height="10px" width="100%" onclick="ce.value=\''+m+'\';document.getElementById(\'search\').style.display=\'none\';" class="sj"><label style="background-color:'+m+'">&nbsp;&nbsp;&nbsp;</label>'+ss(m)+'</div>').join('');
         document.getElementById("search").style.display='block';
         document.getElementById("search").innerHTML=sd;
+        function ss(sk){
+            var g=sk.search(ce.value);
+           return(sk.substring(0,g)+'<mark>'+ce.value+'</mark>'+sk.substring(g+ce.value.length,sk.length));
+          }
              } else { document.getElementById("search").style.display='none'; }
         });
 function bc(p,n){
@@ -31,6 +35,25 @@ function bc(p,n){
    document.getElementById("toast").innerHTML="成功保存了相关内容。";
    setTimeout(function(){document.getElementById("toast").style.display='none';}, 2000);
   }
+
 function ade(){
-  document.getElementById("el").innerHTML+='<div name="els">未制作程序</div>';
+  document.getElementById("el").innerHTML+='<div name="els">元素标签名称:<input name="hn"/></div>';
+  sha();
  }
+function sha(){
+  hs=document.getElementsByName("hn");
+  for(var b=0; b<hs.length; b++){
+     hs[b].addEventListener("keyup",function(e){
+    var sl='p,h1,h2,h3,h4,h5,h6,hr,br,nobr,center,marquee,button,script,a,img,b,strong,small,i,em,u,sup,sub,span,font,blockquote,cite,address,code,var,dfn,del,pre,mark,details,summary,divsection,article,header,footer,ul,ol,li,dl,dt,dd,table,caption,tr,th,td,fieldset,input,selction,option,textarea,datalist,meter,progress,audio,video';
+   var slt='p,h1,h2,h3,h4,h5,h6,hr,br,nobr,center,marquee,button,script,a,img,b,strong,small,i,em,u,sup,sub,span,font,blockquote,cite,address,code,var,dfn,del,pre,mark,details,summary,divsection,article,header,footer,ul,ol,li,dl,dt,dd,table,caption,tr,th,td,fieldset,input,selction,option,textarea,datalist,meter,progress,audio,video';
+  sl=sl.split(',');slt=slt.split(',');
+  for(var n=0; n<sl.length; n++){
+         var s=sl[n];var yn=(s.search(hs[b-1].value)==-1);
+         if(yn){slt.splice(slt.findIndex(item => item === s), 1);}
+      }
+  var sdh=slt.map(m => '<div height="10px" width="100%" onclick="hs['+(b-1)+'].value=\''+m+'\';document.getElementById(\'sh\').style.display=\'none\';" class="sj">'+m+'</div>').join('');
+  document.getElementById("sh").style.display='block';
+  document.getElementById("sh").innerHTML=sdh;
+    });
+  }
+}
