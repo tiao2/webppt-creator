@@ -141,5 +141,16 @@ pre {
    color: white;
    text-align: center;
    display: none;
-   font-size: 80%;
    }
+#sh {
+   position:fixed;
+   top:30%;
+   left:27%;
+   z-index:2;
+  display:none;
+  width:20%;
+  background-color:#eee;
+  height:30%;
+  overflow-x:hidden;
+  overflow-y:auto;
+  }
