@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8">
     <title>网页版演示文稿</title>
-    <link rel="stylesheet" href="list.css"/>
+    <link rel="stylesheet" href="Styles/list.css"/>
 </head>
 <body>
     <div id='header'><img src="logo.svg" height="100%"/><label id="title">网页版PPT制作</label><button id="read" onclick='dq()'>读取.pptjs</button><button onclick="location.href='docs/doc.html'" id="sub">帮助文档</button></div>
    <div id='bodier'>
-   <section style='background-image: url("bg.svg");color: white;height: 80%;'>
+   <section style='background-image: url("Images/bg.svg");color: white;height: 80%;'>
      <h1 style='font-size: 50px;'><center>制作你的第一个网页版演示文稿</center></h1>
      <button class='buttons' id='ks' onclick='location.href="edit.html"'>立即制作</button>
-     <button class='buttons' id='ex' onclick='location.href="read.html?f=test.pptjs"'>查看示例</button>
+     <button class='buttons' id='ex' onclick='location.href="read.html?f=Library/test.pptjs"'>查看示例</button>
    </section>
    </div>
-   <script src='fileImport.js'></script>
-   <script src='base64.js'></script>
+   <script src='Scripts/fileImport.js'></script>
+   <script src='Scripts/base64.js'></script>
    <script>
    function dq(){
        fileImport(function(n,f){
