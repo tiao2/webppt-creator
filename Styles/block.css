@@ -141,6 +141,7 @@ pre {
    color: white;
    text-align: center;
    display: none;
+   font-size: 80%;
    }
 #sh {
    position:fixed;
