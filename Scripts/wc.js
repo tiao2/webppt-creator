@@ -13,9 +13,14 @@ function gqu() {
 };
 
 function download(){
-   var img = gqu().f.toDataURL("pptjs");
-   var a = document.createElement('a');
-   a.href = img;
-  a.download = document.getElementsByTagName("input")[0].value;
-  a.click();
+    const blob = new Blob([dc(gqu().f)], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.style.display = 'none';
+    a.href = url;
+    a.download = document.getElementsByTagName("input")[0].value+'.pptjs';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 100);
 }
