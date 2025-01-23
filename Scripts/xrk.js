@@ -9,3 +9,8 @@ document.getElementById("input").addEventListener('keyup', function(event){
              module2.addEventListener('scroll', function() {
                 module1.scrollTop = module2.scrollTop;
                  });
+
+function wc(){
+   var file=document.getElementById("hd").innerText+'\n'+document.getElementById("input").innerText+'\n'+document.getElementById("bd").innerText;
+   location.href='wc.html?f='+ec(file);
+}
