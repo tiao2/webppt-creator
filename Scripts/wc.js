@@ -13,7 +13,7 @@ function gqu() {
 };
 
 function download(){
-    const blob = new Blob([dc(gqu().f)], { type: 'text/plain' });
+    const blob = new Blob([dc(gqu().f)], { type: '' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.style.display = 'none';
