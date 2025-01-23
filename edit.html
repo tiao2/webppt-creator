@@ -3,11 +3,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>编辑页面</title>
+    <title>编辑pptjs</title>
     <link rel='stylesheet' href='Styles/ed.css'/>
 </head>
 <body>
-   <div id='mode'><button onclick="location.href='concentrate.html'">专注模式</button><button onclick="location.href='block.html'">可视化编程模式</button><button>完成</button></div>
+   <div id='mode'><button onclick="location.href='concentrate.html'">专注模式</button><button onclick="location.href='block.html'">可视化编程模式</button><button onclick='wc()'>完成</button></div>
    <pre id="lineh">1
 2
 3
@@ -53,5 +53,6 @@ var s=0;
 document.addEventListener('mousedown',function(e){try{s++;(pgs[s])();}catch(e){document.write('&lt;h1&gt;&lt;center&gt;The screening is over.&lt;/center&gt;&lt;/h1&gt;');}});
 document.getElementsByTagName('title')[0].innerText='pptjs file reading - '+getwarn('name');</pre>
   <script src='Scripts/xrk.js'></script>
+  <script src='Scripts/base64.js'></script>
 </body>
 </html>
