@@ -41,3 +41,9 @@ function hd(m){
     var str = decodeURIComponent(escape(utf8Str));
     return str;
 }
+
+function sm(){
+    var file;
+    if(gqu().n=='h'){file=ec(editor.getValue()+'\n'+dc(gqu().b)+'\n'+dc(gqu().f));}else if(gqu().n=='b'){file=ec(dc(gqu().h)+'\n'+editor.getValue()+'\n'+dc(gqu().f));}else{file=ec(dc(gqu().h)+'\n'+dc(gqu().b)+'\n'+editor.getValue());};
+    location.href='wc.html?f='+file;
+}
